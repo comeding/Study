@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .window-box{
+            width: 40%;
+            height: 500px;
+            border: 1px solid #666;
+            margin: auto;
+            display: none;
+        }
+        .top{
+            width: 100%;
+            height: 30px;
+            background: #6699CC;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            height:460px;
+            width: 100%;
+            margin-top: 10px;
+            border: 1px solid #666;
+            display: flex;
+           
+        }
+        .left{
+            width: 80%;
+            height: 100%;
+            border: 1px solid #6666FF;
+            margin-right: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .right{
+            width: 50%;
+            height: 100%;
+            border: 1px solid #6666FF;
+            position: relative;
+        }
+        .news{
+            width: 100%;
+            height: 30px;
+            background: #6666FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #fff;
+        }
+        .room-list{
+            width: 100%;
+            height: 30px;
+            background: #6666FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #fff;
+        }
+        .dialogue{
+            width: 100%;
+            height: 100px;
+            border-top: 3px solid #ccc;
+            position: absolute;
+            bottom: 0;
+            padding: 10px;
+            display: flex;
+           
+        }
+        .txt{
+            width: 300px;
+            height: 90%;
+            border: 1px solid #ccc;
+        }
+        .btn{
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+           
+        }
+        .send-out{
+            margin-bottom: 10px;
+            background: pink;
+            border: 0;
+            width: 50px;
+            height: 30px;
+            border-radius: 10%;
+            color: #fff;    
+        }
+        .message-content{
+            margin-top: 3px;
+            width: 100%;
+            height: 65%;
+           
+        }
+        .room-number{
+            display: flex;
+            justify-content: space-between;
+            background: #33CCFF;
+            width: 100%;
+            margin-top: 2px;
+           height: 20px;
+           color: #fff;
+           align-items: center;
+        }
+        .room-number-box{
+            height: 40%;
+            border: 1px solid #ccc;
+           
+        }
+        .user-box{
+            width: 100%;
+            height: 30px;
+            background: #6666FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #fff;
+        }
+        .user-list-box{
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0
+        }
+        .user-list{
+            width: 100%;
+            height: 30px;
+            background: #6666FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #fff;
+        }
+        li{
+            list-style: none;
+            color: #00CCFF;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: right;
+        }
+        .listyle{
+            text-align: left;
+        }
+        .Tips{
+            width: 200px;
+            height: 20px;
+            background: #ccc;
+            margin: auto;
+            margin-top: 10px;
+            font-size: 14px;
+            color:#00CCFF ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+      
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;        
+    }
+        .login{
+            width: 500px;
+            height: 300px;
+            background: #fff;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+        .inpt{
+            width: 80%;
+            height: 30px;
+        }
+        .input-box{
+            display: flex;
+            justify-content: center;
+        }
+        .btn-box{
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+  
+      
+    </style>
+</head>
+<body>
+    <div class="window-box">
+        <!-- 顶部 -->
+        <div class="top">
+            聊天室 - 大厅
+        </div>
+        <!-- 内容 -->
+        <div class="content">
+            <!-- 左边盒子 -->
+            <div class="left">
+              
+                <div class="news"><div>消息列表</div>
+                
+                </div>
+                    <div class="Tips"></div>
+                <div class="message-content">
+                    <ul class="news-list">
+                        
+                    </ul>
+                    <ul class="news-list1">
+                        
+                    </ul>
+                </div>
+                <div class="dialogue">
+                
+                    <div><textarea class="txt"></textarea></div>
+                    <div class="btn">
+                        <button class="send-out">发送</button>
+                        <button class="send-out">清屏</button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 右边盒子 -->
+            <div class="right">
+                <div class="room-list">房间列表</div>
+                <div class="room-number-box">
+                   <div class="room-number">
+                    <span>大厅</span>
+                    <span>2人</span>
+                   </div>
+                   <div class="user-list-box">
+                      <div class="user-list">用户列表</div>
+                      <ul>
+                          <li>如花</li>
+                          <li>赵子龙</li>
+                      </ul>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="login">
+        <h1>登录</h1>
+        <div class="input-box">
+            <input type="text" placeholder="请想一个名字吧！" class="inpt">
+           
+        </div>
+        <div class="btn-box"> <button class="btnlogin">登录</button></div>
+    </div>
+
+    <script>
+        //发送消息
+        let sendBtn = document.querySelector('.send-out')
+        let tipbox = document.querySelector('.Tips')
+        let loginBtn = document.querySelector('.btnlogin')
+        let inpName = document.querySelector('.inpt')
+        let windowBox = document.querySelector('.window-box')
+        
+        //获取本地登录身份
+  
+        let user = sessionStorage.getItem('user')
+        //打印加入聊天室信息
+        
+        tipbox.innerHTML = `${user}加入了聊天室`
+        
+        //删除本地信息
+        // sessionStorage.removeItem('user')  
+
+        //点击发送按钮，发送信息
+       sendMessage(sendBtn)
+        //调用发送方法
+       sendMessage(sendBtn)
+        function sendMessage(sendBtn){
+            //获取输入框的值
+            let textContent =document.querySelector('.txt') 
+            sendBtn.addEventListener('click',function(){
+                //将发送的信息添加到消息列表
+                let newList = document.querySelector('.news-list')
+                let li = document.createElement('li')
+                li.innerHTML = textContent.value 
+                //调用websocket方法创建连接，并发送信息
+                createConnection(textContent.value)
+                //发送消息清空输入框
+                textContent.value = ''  
+                //将li节点添加到ul
+                newList.append(li)
+            }) 
+        } 
+
+        //Websocket连接方法
+         function  createConnection(data){
+            var ws = new WebSocket('ws://localhost:8084')
+            ws.onopen = function(){
+                console.log('发送成功！');
+                ws.send(data)
+            }
+            ws.onmessage = function(e){
+                //将服务端返回的数据渲染到信息列表
+                let newList = document.querySelector('.news-list')
+                let li = document.createElement('li')
+                li.classList.add('listyle');
+                console.log(blobdata(e.data));
+                // li.innerHTML = blobdata(e.data)
+                newList.append(li)
+            }
+        }     
+
+
+
+        //转换blob方法
+        function blobdata(data){
+            var reader = new FileReader();
+                    reader.readAsText(data,"utf-8");
+                    reader.onload = function(){
+                        console.log(this.result);
+                    }
+        }
+    </script>
+</body>
+</html>
